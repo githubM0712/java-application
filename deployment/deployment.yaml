@@ -21,10 +21,10 @@ spec:
         app: java
     spec:
       containers:
-      - name: java
-        image: 549670252733.dkr.ecr.ap-south-1.amazonaws.com/java-application:10
-        ports:
-        - containerPort: 8080
+        - name: java
+          image: 549670252733.dkr.ecr.ap-south-1.amazonaws.com/java-application:10
+          ports:
+          - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -35,9 +35,9 @@ metadata:
    app: java
 spec:
   selector:
-    app: java
+   app: java
   ports:
-    - port: 80
-      targetport: 8080
+   - port: 80
+     targetport: 8080
   type: LoadBalancer
 
