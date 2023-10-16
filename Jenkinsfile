@@ -54,8 +54,8 @@ pipeline {
                      git config user.email "sandesh.indoreinfoline@gmail.com"
                      git config user.name "githubM0712"
                      git add deployment/deployment.yaml
-                     git commit -m "Update image to tag to ${BUILD_NUMBER}"
-                     git remote set-url origin https://$GIT_PASSWORD@github.com/githubM0712/java-application.git
+                     git commit -m "Update image tag to  ${BUILD_NUMBER}"
+                     git remote set-url origin https://$GIT_USERNAME:$GIT_PASSWORD@github.com/githubM0712/java-application.git
                      git push --set-upstream origin main
                      git push
                    '''
