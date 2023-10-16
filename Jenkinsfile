@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Cloning') {
             steps {
-                git branch 'main',credentialsId: 'java_repo_creds', url: 'https://github.com/githubM0712/java-application.git'
+                git branch: 'main',credentialsId: 'java_repo_creds', url: 'https://github.com/githubM0712/java-application.git'
             }
         } 
            
