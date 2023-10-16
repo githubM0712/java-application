@@ -15,7 +15,7 @@
                   <configuration>
                        <failOnMissingWebXml>false</failOnMissingWebXml>
                   </configuration>
-           <plugin>
-       <plugins>
+           </plugin>
+       </plugins>
     </build>
 </project>
