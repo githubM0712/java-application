@@ -49,7 +49,7 @@ pipeline {
           steps {
             script {
                sh "sed -i 's|549670252733.dkr.ecr.ap-south-1.amazonaws.com/java-application:[0-9]*|${DOCKER_IMAGE}:${BUILD_NUMBER}|g' deployment/deployment.yaml"
-               WithCredentials([usernamePassword(credentialsID: 'java_repo_creds', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+               withCredentials([usernamePassword(credentialsID: 'java_repo_creds', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                sh ''' 
                      git config user.email "githubcloudcontainer@gmail.com"
                      git config user.name "githubM0712"
