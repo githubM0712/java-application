@@ -51,7 +51,7 @@ pipeline {
                sh "sed -i 's|549670252733.dkr.ecr.ap-south-1.amazonaws.com/java-application:[0-9]*|${DOCKER_IMAGE}:${BUILD_NUMBER}|g' deployment/deployment.yaml"
                withCredentials([usernamePassword(credentialsID: 'java_repo_creds', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                sh ''' 
-                     git config user.email "githubcloudcontainer@gmail.com"
+                     git config user.email "sandesh.indoreinfoline@gmail.com"
                      git config user.name "githubM0712"
                      git add deployment/deployment.yaml
                      git commit -m "Update image to tag to ${BUILD_NUMBER}"
