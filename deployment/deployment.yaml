@@ -1,5 +1,5 @@
-kind: Deployment
 apiVersion: app/v1
+kind: Deployment
 metadata:
   name: java-app-deployment
   labels: 
